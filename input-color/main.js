@@ -1,14 +1,11 @@
-const inputs = document.querySelectorAll('.color-box > input')
 const root = document.documentElement
 const range = document.querySelector('.booth-slider')
 
 //as slider range's value changes, do something
 range.addEventListener('input', handleSlider)
 
-//as the value in the input changes, do something.
-inputs.forEach(input => {
-  input.addEventListener('input', handleInputChange)
-})
+const boxesContainer = document.querySelector('.color-boxes')
+boxesContainer.addEventListener('input', handleInputChange)
 
 function handleInputChange (e) {
   const { value } = e.target
